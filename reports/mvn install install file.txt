@@ -1,0 +1,15 @@
+mvn install:install-file -Dfile=./lib/annotations-13.0.jar -DgroupId=com.pepper -DartifactId=annotations -Dversion=13.0 -Dpackaging=jar
+
+mvn install:install-file -Dfile=./lib/kotlin-stdlib-1.3.72.jar -DgroupId=com.pepper -DartifactId=kotlin-stdlib -Dversion=1.3.72 -Dpackaging=jar
+
+mvn install:install-file -Dfile=./lib/kotlin-stdlib-common-1.3.72.jar -DgroupId=com.pepper -DartifactId=kotlin-stdlib-common -Dversion=1.3.72 -Dpackaging=jar
+
+mvn install:install-file -Dfile=./lib/kotlin-stdlib-jdk7-1.3.72.jar -DgroupId=com.pepper -DartifactId=kotlin-stdlib-jdk7 -Dversion=1.3.72 -Dpackaging=jar
+
+mvn install:install-file -Dfile=./lib/kotlin-stdlib-jdk8-1.3.72.jar -DgroupId=com.pepper -DartifactId=kotlin-stdlib-jdk8 -Dversion=1.3.72 -Dpackaging=jar
+
+mvn install:install-file -Dfile=./lib/libqi-java-desktop-2.0.3.jar -DgroupId=com.pepper -DartifactId=libqi-java-desktop -Dversion=2.0.3 -Dpackaging=jar
+
+mvn install:install-file -Dfile=./lib/rdta-1.5.3.jar -DgroupId=com.pepper -DartifactId=rdta -Dversion=1.5.3 -Dpackaging=jar
+
+mvn install:install-file -Dfile=./lib/searchableOptions-1.5.3.jar -DgroupId=com.pepper -DartifactId=searchableOptions -Dversion=1.5.3 -Dpackaging=jar
