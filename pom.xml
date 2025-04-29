@@ -43,6 +43,36 @@
             <artifactId>kotlin-stdlib</artifactId>
             <version>1.3.72</version>
         </dependency>
+        <dependency>
+            <groupId>com.pepper</groupId>
+            <artifactId>kotlin-stdlib-common</artifactId>
+            <version>1.3.72</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pepper</groupId>
+            <artifactId>kotlin-stdlib-jdk7</artifactId>
+            <version>1.3.72</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pepper</groupId>
+            <artifactId>kotlin-stdlib-jdk8</artifactId>
+            <version>1.3.72</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pepper</groupId>
+            <artifactId>libqi-java-desktop</artifactId>
+            <version>2.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pepper</groupId>
+            <artifactId>rdta</artifactId>
+            <version>1.5.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pepper</groupId>
+            <artifactId>searchableOptions</artifactId>
+            <version>1.5.3</version>
+        </dependency>
     </dependencies>
 
     <properties>
