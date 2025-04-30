@@ -1,0 +1,325 @@
+{
+  "results": [
+    {
+      "code": "70         cmd = \"%s 2>/dev/null >'%s'\" % (commandstring, fp.name)\n71         return fp.read().strip() if not os.system(cmd) else None\n72 \n",
+      "col_offset": 40,
+      "end_col_offset": 54,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/_osx_support.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "Starting a process with a shell, possible injection detected, security issue.",
+      "line_number": 71,
+      "line_range": [
+        71
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html",
+      "test_id": "B605",
+      "test_name": "start_process_with_a_shell"
+    },
+    {
+      "code": "208             def __init__(self, *args):\n209                 self._x = hashlib.sha1(*args)\n210                 self.digest_size = self._x.digest_size\n",
+      "col_offset": 26,
+      "end_col_offset": 45,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/test/test_hmac.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 327,
+        "link": "https://cwe.mitre.org/data/definitions/327.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "Use of weak SHA1 hash for security. Consider usedforsecurity=False",
+      "line_number": 209,
+      "line_range": [
+        209
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b324_hashlib.html",
+      "test_id": "B324",
+      "test_name": "hashlib"
+    },
+    {
+      "code": "100 \n101             os.chmod(TESTFN, 0o007)\n102             st_mode = self.get_mode()\n",
+      "col_offset": 12,
+      "end_col_offset": 35,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/test/test_stat.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 732,
+        "link": "https://cwe.mitre.org/data/definitions/732.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "Chmod setting a permissive mask 0o7 on file (TESTFN).",
+      "line_number": 101,
+      "line_range": [
+        101
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b103_set_bad_file_permissions.html",
+      "test_id": "B103",
+      "test_name": "set_bad_file_permissions"
+    },
+    {
+      "code": "1 import socket\n2 import telnetlib\n3 import time\n",
+      "col_offset": 0,
+      "end_col_offset": 16,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/test/test_telnetlib.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 319,
+        "link": "https://cwe.mitre.org/data/definitions/319.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "A telnet-related module is being imported.  Telnet is considered insecure. Use SSH or some other encrypted protocol.",
+      "line_number": 2,
+      "line_range": [
+        2
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b401-import-telnetlib",
+      "test_id": "B401",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "59         # connects\n60         telnet = telnetlib.Telnet(HOST, self.port)\n61         telnet.sock.close()\n",
+      "col_offset": 17,
+      "end_col_offset": 50,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/test/test_telnetlib.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 319,
+        "link": "https://cwe.mitre.org/data/definitions/319.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.",
+      "line_number": 60,
+      "line_range": [
+        60
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib",
+      "test_id": "B312",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "625 \n626         import ftplib\n627         data = \"rheum rhaponicum\"\n",
+      "col_offset": 8,
+      "end_col_offset": 21,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/test/test_urllib2.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 319,
+        "link": "https://cwe.mitre.org/data/definitions/319.html"
+      },
+      "issue_severity": "HIGH",
+      "issue_text": "A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.",
+      "line_number": 626,
+      "line_range": [
+        626
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b402-import-ftplib",
+      "test_id": "B402",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "701         # This could raise an exception!\n702         return loads( _unquote(val) ), val\n703     def value_encode(self, val):\n",
+      "col_offset": 15,
+      "end_col_offset": 37,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/Cookie.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 502,
+        "link": "https://cwe.mitre.org/data/definitions/502.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+      "line_number": 702,
+      "line_range": [
+        702
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b301-pickle",
+      "test_id": "B301",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "65     except ImportError:\n66         fp = open(\"/tmp/_osx_support.%s\"%(\n67             os.getpid(),), \"w+b\")\n68 \n",
+      "col_offset": 18,
+      "end_col_offset": 40,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/_osx_support.py",
+      "issue_confidence": "MEDIUM",
+      "issue_cwe": {
+        "id": 377,
+        "link": "https://cwe.mitre.org/data/definitions/377.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Probable insecure usage of temp file/directory.",
+      "line_number": 66,
+      "line_range": [
+        66,
+        67
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b108_hardcoded_tmp_directory.html",
+      "test_id": "B108",
+      "test_name": "hardcoded_tmp_directory"
+    },
+    {
+      "code": "55     if __name__.startswith('bsddb3.') :\n56         exec(\"from ._pybsddb import *\")\n57         exec(\"from ._pybsddb import __version__\")\n",
+      "col_offset": 8,
+      "end_col_offset": 39,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/bsddb/db.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Use of exec detected.",
+      "line_number": 56,
+      "line_range": [
+        56
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b102_exec_used.html",
+      "test_id": "B102",
+      "test_name": "exec_used"
+    },
+    {
+      "code": "186                     namespace.update(__main__.__builtins__.__dict__)\n187                     bigl = eval(\"dir()\", namespace)\n188                     bigl.sort()\n",
+      "col_offset": 27,
+      "end_col_offset": 51,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/idlelib/AutoComplete.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 78,
+        "link": "https://cwe.mitre.org/data/definitions/78.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+      "line_number": 187,
+      "line_range": [
+        187
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b307-eval",
+      "test_id": "B307",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "51         column_names = [str(table_info[1]) for table_info in res.fetchall()]\n52         q = \"\"\"SELECT 'INSERT INTO \"{0}\" VALUES({1})' FROM \"{0}\";\"\"\".format(\n53             table_name_ident,\n",
+      "col_offset": 12,
+      "end_col_offset": 68,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/sqlite3/dump.py",
+      "issue_confidence": "LOW",
+      "issue_cwe": {
+        "id": 89,
+        "link": "https://cwe.mitre.org/data/definitions/89.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Possible SQL injection vector through string-based query construction.",
+      "line_number": 52,
+      "line_range": [
+        52
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b608_hardcoded_sql_expressions.html",
+      "test_id": "B608",
+      "test_name": "hardcoded_sql_expressions"
+    },
+    {
+      "code": "530         sample = short_sample + b\"\\0\"*(20 - len(short_sample))\n531         tfn = tempfile.mktemp()\n532         try:\n",
+      "col_offset": 14,
+      "end_col_offset": 31,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/test/test_bytes.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 377,
+        "link": "https://cwe.mitre.org/data/definitions/377.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Use of insecure and deprecated function (mktemp).",
+      "line_number": 531,
+      "line_range": [
+        531
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b306-mktemp-q",
+      "test_id": "B306",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "1859         # Ask for a randomly assigned port (by using port 0)\n1860         t = logging.config.listen(0)\n1861         t.start()\n",
+      "col_offset": 12,
+      "end_col_offset": 36,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/test/test_logging.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 94,
+        "link": "https://cwe.mitre.org/data/definitions/94.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Use of insecure logging.config.listen detected.",
+      "line_number": 1860,
+      "line_range": [
+        1860
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b612_logging_config_insecure_listen.html",
+      "test_id": "B612",
+      "test_name": "logging_config_insecure_listen"
+    },
+    {
+      "code": "56     def testParseFromFile(self):\n57         dom = parse(StringIO(open(tstfile).read()))\n58         dom.unlink()\n",
+      "col_offset": 14,
+      "end_col_offset": 51,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/test/test_minidom.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 20,
+        "link": "https://cwe.mitre.org/data/definitions/20.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Using xml.dom.minidom.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.dom.minidom.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+      "line_number": 57,
+      "line_range": [
+        57
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b313-b320-xml-bad-minidom",
+      "test_id": "B318",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "67     def testInsertBefore(self):\n68         dom = parseString(\"<doc><foo/></doc>\")\n69         root = dom.documentElement\n",
+      "col_offset": 14,
+      "end_col_offset": 46,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/test/test_minidom.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 20,
+        "link": "https://cwe.mitre.org/data/definitions/20.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Using xml.dom.minidom.parseString to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.dom.minidom.parseString with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+      "line_number": 68,
+      "line_range": [
+        68
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b313-b320-xml-bad-minidom",
+      "test_id": "B318",
+      "test_name": "blacklist"
+    },
+    {
+      "code": "94 \n95             os.chmod(TESTFN, 0o070)\n96             st_mode = self.get_mode()\n",
+      "col_offset": 12,
+      "end_col_offset": 35,
+      "filename": "/home/franz2897/Documents/usf_master/iotSecurity/naoqi_py/pynaoqi-python2.7-2.8.6.23-linux64-20191127_152327/lib/python2.7/test/test_stat.py",
+      "issue_confidence": "HIGH",
+      "issue_cwe": {
+        "id": 732,
+        "link": "https://cwe.mitre.org/data/definitions/732.html"
+      },
+      "issue_severity": "MEDIUM",
+      "issue_text": "Chmod setting a permissive mask 0o70 on file (TESTFN).",
+      "line_number": 95,
+      "line_range": [
+        95
+      ],
+      "more_info": "https://bandit.readthedocs.io/en/1.8.3/plugins/b103_set_bad_file_permissions.html",
+      "test_id": "B103",
+      "test_name": "set_bad_file_permissions"
+    }
+  ]
+}
