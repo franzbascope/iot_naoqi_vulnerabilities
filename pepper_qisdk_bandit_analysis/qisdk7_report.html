@@ -1,0 +1,1373 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+    Bandit Report
+</title>
+
+<style>
+
+html * {
+    font-family: "Arial", sans-serif;
+}
+
+pre {
+    font-family: "Monaco", monospace;
+}
+
+.bordered-box {
+    border: 1px solid black;
+    padding-top:.5em;
+    padding-bottom:.5em;
+    padding-left:1em;
+}
+
+.metrics-box {
+    font-size: 1.1em;
+    line-height: 130%;
+}
+
+.metrics-title {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: .25em;
+}
+
+.issue-description {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.candidate-issues {
+    margin-left: 2em;
+    border-left: solid 1px; LightGray;
+    padding-left: 5%;
+    margin-top: .2em;
+    margin-bottom: .2em;
+}
+
+.issue-block {
+    border: 1px solid LightGray;
+    padding-left: .5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-bottom: .5em;
+}
+
+.issue-sev-high {
+    background-color: Pink;
+}
+
+.issue-sev-medium {
+    background-color: NavajoWhite;
+}
+
+.issue-sev-low {
+    background-color: LightCyan;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="metrics">
+    <div class="metrics-box bordered-box">
+        <div class="metrics-title">
+            Metrics:<br>
+        </div>
+        Total lines of code: <span id="loc">406102</span><br>
+        Total lines skipped (#nosec): <span id="nosec">0</span>
+    </div>
+</div>
+
+
+
+<br>
+<div id="skipped">
+<div class="bordered-box">
+<b>Skipped files:</b><br><br>
+/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/BaseHTTPServer.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/Bastion.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/CGIHTTPServer.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ConfigParser.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/DocXMLRPCServer.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/SimpleXMLRPCServer.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/SocketServer.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/StringIO.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/UserDict.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/UserString.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/_strptime.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/aifc.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/anydbm.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/asynchat.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/asyncore.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/atexit.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/audiodev.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/base64.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bdb.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/binhex.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/__init__.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/dbrecio.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/dbshelve.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/dbtables.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_all.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_associate.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_basics.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_compare.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_compat.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_dbenv.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_dbshelve.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_dbtables.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_distributed_transactions.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_early_close.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_join.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_lock.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_pickle.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_queue.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_recno.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_replication.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_sequence.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/bsddb/test/test_thread.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/cProfile.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/calendar.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/cgi.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/chunk.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/cmd.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/code.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/codecs.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/codeop.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/collections.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/compileall.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/compiler/future.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/compiler/pyassem.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/compiler/pycodegen.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/compiler/symbols.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/compiler/syntax.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/compiler/transformer.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/compiler/visitor.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/contextlib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/copy.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/copy_reg.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/csv.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ctypes/macholib/dyld.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ctypes/test/__init__.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ctypes/test/test_bitfields.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ctypes/test/test_find.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ctypes/test/test_keeprefs.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ctypes/test/test_loading.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ctypes/test/test_numbers.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ctypes/test/test_pointers.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ctypes/test/test_prototypes.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ctypes/test/test_strings.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ctypes/test/test_structures.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ctypes/util.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/curses/has_key.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/curses/textpad.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/dbhash.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/decimal.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/difflib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/dis.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/dist-packages/urdf_parser_py/xml_reflection/core.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/archive_util.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/bcppcompiler.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/ccompiler.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/cmd.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/command/bdist.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/command/bdist_dumb.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/command/bdist_msi.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/command/bdist_rpm.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/command/bdist_wininst.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/command/build_clib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/command/build_ext.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/command/build_scripts.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/command/install.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/command/install_lib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/command/install_scripts.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/command/register.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/command/sdist.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/command/upload.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/config.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/core.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/cygwinccompiler.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/dep_util.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/dir_util.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/dist.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/emxccompiler.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/fancy_getopt.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/file_util.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/filelist.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/msvc9compiler.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/msvccompiler.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/spawn.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/tests/test_spawn.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/text_file.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/unixccompiler.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/util.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/distutils/version.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/doctest.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/dumbdbm.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/email/test/test_email.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/email/test/test_email_renamed.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/encodings/__init__.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/encodings/punycode.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/encodings/utf_16.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/encodings/utf_32.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/encodings/uu_codec.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/filecmp.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/fileinput.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/formatter.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/fpformat.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ftplib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/getopt.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/getpass.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/gettext.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/gzip.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/heapq.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/hotshot/log.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/hotshot/stats.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/hotshot/stones.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/htmllib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/httplib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/ClassBrowser.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/ColorDelegator.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/EditorWindow.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/FileList.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/IOBinding.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/MultiCall.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/Percolator.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/PyShell.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/RemoteDebugger.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/ScrolledList.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/TreeWidget.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/UndoDelegator.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/WidgetRedirector.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/WindowList.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/configHandler.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/idle_test/test_calltips.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/rpc.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/idlelib/run.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ihooks.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/imaplib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/imghdr.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/imputil.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/json/__init__.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/json/encoder.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/json/tests/test_dump.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/json/tests/test_float.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/json/tool.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib-tk/Dialog.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib-tk/FileDialog.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib-tk/SimpleDialog.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib-tk/Tix.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib-tk/Tkinter.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib-tk/test/widget_tests.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib-tk/tkColorChooser.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib-tk/tkCommonDialog.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib-tk/tkFileDialog.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib-tk/tkFont.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib-tk/tkMessageBox.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib-tk/tkSimpleDialog.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib-tk/turtle.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/fixes/fix_unicode.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/main.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/pgen2/conv.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/pgen2/driver.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/pgen2/grammar.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/pgen2/literals.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/pgen2/pgen.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/pgen2/tokenize.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/tests/data/bom.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/tests/data/crlf.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/tests/data/different_encoding.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/tests/data/false_encoding.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/tests/data/py2_test_grammar.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/tests/pytree_idempotency.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/locale.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/macpath.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/macurl2path.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/mailbox.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/mailcap.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/mhlib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/mimetools.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/mimetypes.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/mimify.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/modulefinder.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/multifile.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/multiprocessing/connection.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/multiprocessing/forking.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/multiprocessing/managers.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/multiprocessing/pool.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/multiprocessing/process.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/multiprocessing/queues.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/multiprocessing/sharedctypes.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/multiprocessing/util.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/netrc.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/nntplib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/nturl2path.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/optparse.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/os.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/pdb.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/pickle.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/pickletools.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/pipes.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/pkgutil.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/plat-linux2/DLFCN.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/plat-linux2/IN.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/plat-linux2/TYPES.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/platform.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/plistlib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/poplib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/posixfile.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/pprint.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/profile.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/pstats.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/pty.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/py_compile.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/pyclbr.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/pydoc.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/quopri.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/random.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/re.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/rexec.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/rfc822.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/rlcompleter.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/runpy.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/sets.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/sgmllib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/shlex.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/shutil.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/site-packages/almath.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/site-packages/qi/__init__.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/site-packages/qi/test/test_applicationsession.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/site-packages/qi/test/test_async.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/site-packages/qi/test/test_call.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/site-packages/qi/test/test_createobject.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/site-packages/qi/test/test_promise.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/site-packages/qi/test/test_strand.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/site.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/smtpd.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/smtplib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/sndhdr.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/socket.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/sqlite3/test/dbapi.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/sqlite3/test/factory.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/sqlite3/test/hooks.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/sqlite3/test/transactions.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/sqlite3/test/userfunctions.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/sre_compile.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/sre_constants.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/sre_parse.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/ssl.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/stat.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/string.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/stringold.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/subprocess.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/sunau.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/sunaudio.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/symtable.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/sysconfig.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/tabnanny.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/tarfile.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/telnetlib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/tempfile.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/bad_coding.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/bad_coding2.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/bad_coding3.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/badsyntax_future8.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/badsyntax_future9.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/badsyntax_nocaret.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/inspect_fodder.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/inspect_fodder2.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/list_tests.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/mapping_tests.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/pickletester.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/pydocfodder.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/pystone.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/regrtest.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/reperf.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/seq_tests.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/sortperf.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/string_tests.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test___all__.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_al.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_array.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_ast.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_asynchat.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_atexit.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_bigmem.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_binascii.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_binop.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_bisect.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_bool.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_bsddb.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_builtin.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_capi.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_cd.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_cfgparser.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_cgi.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_cl.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_class.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_cmath.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_cmd.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_cmd_line_script.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_code.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_codeccallbacks.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_codecs.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_codeop.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_coercion.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_compare.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_compile.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_compiler.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_complex.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_complex_args.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_contains.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_contextlib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_cookielib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_copy.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_copy_reg.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_crypt.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_curses.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_datetime.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_decimal.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_defaultdict.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_deque.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_descr.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_dict.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_dis.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_dl.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_doctest.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_dumbdbm.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_dummy_thread.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_dummy_threading.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_enumerate.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_eof.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_epoll.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_exception_variations.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_exceptions.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_fcntl.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_file2k.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_fileinput.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_float.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_format.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_fractions.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_frozen.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_ftplib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_funcattrs.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_functools.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_future.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_future4.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_future_builtins.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_gc.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_gdb.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_generators.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_genexps.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_getargs2.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_gettext.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_gl.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_grammar.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_hash.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_hashlib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_heapq.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_httplib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_httpservers.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_imageop.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_imaplib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_imgfile.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_import.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_importhooks.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_index.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_inspect.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_int.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_int_literal.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_ioctl.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_iter.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_itertools.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_kqueue.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_linuxaudiodev.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_list.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_locale.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_long.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_long_future.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_mailbox.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_marshal.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_math.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_memoryio.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_multibytecodec.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_multibytecodec_support.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_multiprocessing.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_mutants.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_netrc.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_nis.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_ntpath.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_opcodes.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_openpty.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_operator.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_optparse.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_os.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_ossaudiodev.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_parser.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_pdb.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_peepholer.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_pep263.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_pkgimport.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_poll.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_poplib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_pow.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_pprint.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_profile.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_pty.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_py3kwarn.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_pyclbr.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_pydoc.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_pyexpat.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_queue.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_random.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_re.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_repr.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_resource.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_rfc822.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_richcmp.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_runpy.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_sax.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_scope.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_select.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_set.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_signal.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_slice.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_socket.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_socketserver.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_sort.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_ssl.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_str.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_strftime.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_string.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_strop.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_strptime.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_struct.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_subprocess.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_sunaudiodev.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_sundry.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_support.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_syntax.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_sys.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_sys_settrace.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_tarfile.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_tcl.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_tempfile.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_thread.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_threaded_import.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_threading.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_threadsignals.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_timeout.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_traceback.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_transformer.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_ttk_guionly.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_types.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_ucn.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_unary.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_unicode.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_unicode_file.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_unicodedata.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_univnewlines2k.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_urllib2_localnet.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_urllib2net.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_urllibnet.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_userdict.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_uu.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_uuid.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_wait3.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_winreg.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_with.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_xdrlib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_xml_etree.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_xmlrpc.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_xpickle.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_xrange.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_zipfile.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_zipimport.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_zipimport_support.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_zlib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/time_hashlib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/textwrap.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/this.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/threading.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/timeit.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/toaiff.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/token.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/tokenize.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/trace.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/unittest/case.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/unittest/loader.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/unittest/main.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/unittest/suite.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/unittest/test/support.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/unittest/test/test_assertions.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/unittest/test/test_case.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/unittest/test/test_loader.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/unittest/test/test_result.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/urllib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/urllib2.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/urlparse.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/uu.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/uuid.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/warnings.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/wave.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/weakref.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/webbrowser.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/whichdb.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/wsgiref/handlers.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/wsgiref/simple_server.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/xdrlib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/xml/dom/NodeFilter.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/xml/dom/domreg.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/xml/dom/expatbuilder.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/xml/dom/minidom.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/xml/dom/pulldom.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/xml/dom/xmlbuilder.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/xml/etree/ElementTree.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/xml/sax/__init__.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/xml/sax/expatreader.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/xml/sax/handler.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/xml/sax/xmlreader.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/xmllib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/xmlrpclib.py <b>reason:</b> syntax error while parsing AST from file<br>/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/zipfile.py <b>reason:</b> syntax error while parsing AST from file<br>
+</div>
+</div>
+
+
+<br>
+<div id="results">
+    
+<div id="issue-0">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/_osx_support.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/_osx_support.py</a><br>
+    <b>Line number: </b>71<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+70	        cmd = &quot;%s 2&gt;/dev/null &gt;&#x27;%s&#x27;&quot; % (commandstring, fp.name)
+71	        return fp.read().strip() if not os.system(cmd) else None
+72	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-1">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/_osx_support.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/_osx_support.py</a><br>
+    <b>Line number: </b>238<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+237	        # issues when building Python itself
+238	        status = os.system(
+239	            &quot;&quot;&quot;echo &#x27;int main{};&#x27; | &quot;&quot;&quot;
+240	            &quot;&quot;&quot;&#x27;%s&#x27; -c -arch ppc -x c -o /dev/null /dev/null 2&gt;/dev/null&quot;&quot;&quot;
+241	            %(_config_vars[&#x27;CC&#x27;].replace(&quot;&#x27;&quot;, &quot;&#x27;\&quot;&#x27;\&quot;&#x27;&quot;),))
+242	        if status:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-2">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/commands.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/commands.py</a><br>
+    <b>Line number: </b>59<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+58	    import os
+59	    pipe = os.popen(&#x27;{ &#x27; + cmd + &#x27;; } 2&gt;&amp;1&#x27;, &#x27;r&#x27;)
+60	    text = pipe.read()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-3">
+<div class="issue-block issue-sev-high">
+    <b>hashlib: </b> Use of weak MD5 hash for security. Consider usedforsecurity=False<br>
+    <b>Test ID:</b> B324<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/327.html" target="_blank">CWE-327</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/dist-packages/genmsg/gentools.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/dist-packages/genmsg/gentools.py</a><br>
+    <b>Line number: </b>119<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b324_hashlib.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b324_hashlib.html</a><br>
+
+<div class="code">
+<pre>
+118	    &quot;&quot;&quot;
+119	    return _compute_hash(msg_context, spec, hashlib.md5())
+120	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-4">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/tests/test_parser.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/lib2to3/tests/test_parser.py</a><br>
+    <b>Line number: </b>238<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+237	        fn = fn.replace(&#x27;&quot;&#x27;, &#x27;\\&quot;&#x27;)
+238	        return os.system(&#x27;diff -u &quot;%s&quot; @&#x27; % fn)
+239	    finally:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-5">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/multiprocessing/__init__.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/multiprocessing/__init__.py</a><br>
+    <b>Line number: </b>123<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+122	        try:
+123	            with os.popen(comm) as p:
+124	                num = int(p.read())
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-6">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/popen2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/popen2.py</a><br>
+    <b>Line number: </b>148<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+147	        file objects (child_stdout, child_stdin) are returned.&quot;&quot;&quot;
+148	        w, r = os.popen2(cmd, mode, bufsize)
+149	        return r, w
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-7">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/popen2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/popen2.py</a><br>
+    <b>Line number: </b>158<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+157	        file objects (child_stdout, child_stdin, child_stderr) are returned.&quot;&quot;&quot;
+158	        w, r, e = os.popen3(cmd, mode, bufsize)
+159	        return r, w, e
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-8">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/popen2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/popen2.py</a><br>
+    <b>Line number: </b>168<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+167	        file objects (child_stdout_stderr, child_stdin) are returned.&quot;&quot;&quot;
+168	        w, r = os.popen4(cmd, mode, bufsize)
+169	        return r, w
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-9">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_commands.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_commands.py</a><br>
+    <b>Line number: </b>38<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+37	
+38	            status, output = commands.getstatusoutput(&#x27;cat &#x27; + name)
+39	            self.assertNotEqual(status, 0)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-10">
+<div class="issue-block issue-sev-high">
+    <b>hashlib: </b> Use of weak SHA1 hash for security. Consider usedforsecurity=False<br>
+    <b>Test ID:</b> B324<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/327.html" target="_blank">CWE-327</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_hmac.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_hmac.py</a><br>
+    <b>Line number: </b>209<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b324_hashlib.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b324_hashlib.html</a><br>
+
+<div class="code">
+<pre>
+208	            def __init__(self, *args):
+209	                self._x = hashlib.sha1(*args)
+210	                self.digest_size = self._x.digest_size
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-11">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen.py</a><br>
+    <b>Line number: </b>20<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+19	        cmd = &#x27;%s -c &quot;import sys;print sys.argv&quot; %s&#x27; % (python, cmdline)
+20	        data = os.popen(cmd).read() + &#x27;\n&#x27;
+21	        got = eval(data)[1:] # strip off argv[0]
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-12">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py</a><br>
+    <b>Line number: </b>73<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+72	    def test_popen2(self):
+73	        r, w = popen2.popen2(self.cmd)
+74	        self.validate_output(self.teststr, self.expected, r, w)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-13">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py</a><br>
+    <b>Line number: </b>78<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+77	        if os.name == &#x27;posix&#x27;:
+78	            r, w, e = popen2.popen3([self.cmd])
+79	            self.validate_output(self.teststr, self.expected, r, w, e)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-14">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py</a><br>
+    <b>Line number: </b>81<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+80	
+81	        r, w, e = popen2.popen3(self.cmd)
+82	        self.validate_output(self.teststr, self.expected, r, w, e)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-15">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py</a><br>
+    <b>Line number: </b>87<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+86	        if os.name == &#x27;posix&#x27;:
+87	            w, r = os.popen2([self.cmd])
+88	            self.validate_output(self.teststr, self.expected, r, w)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-16">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py</a><br>
+    <b>Line number: </b>90<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+89	
+90	            w, r = os.popen2([&quot;echo&quot;, self.teststr])
+91	            got = r.read()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-17">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py</a><br>
+    <b>Line number: </b>94<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+93	
+94	        w, r = os.popen2(self.cmd)
+95	        self.validate_output(self.teststr, self.expected, r, w)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-18">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py</a><br>
+    <b>Line number: </b>100<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+99	        if os.name == &#x27;posix&#x27;:
+100	            w, r, e = os.popen3([self.cmd])
+101	            self.validate_output(self.teststr, self.expected, r, w, e)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-19">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py</a><br>
+    <b>Line number: </b>103<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+102	
+103	            w, r, e = os.popen3([&quot;echo&quot;, self.teststr])
+104	            got = r.read()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-20">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py</a><br>
+    <b>Line number: </b>109<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+108	
+109	        w, r, e = os.popen3(self.cmd)
+110	        self.validate_output(self.teststr, self.expected, r, w, e)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-21">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py</a><br>
+    <b>Line number: </b>114<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+113	        if os.name == &#x27;posix&#x27;:
+114	            w, r = os.popen4([self.cmd])
+115	            self.validate_output(self.teststr, self.expected, r, w)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-22">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py</a><br>
+    <b>Line number: </b>117<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+116	
+117	            w, r = os.popen4([&quot;echo&quot;, self.teststr])
+118	            got = r.read()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-23">
+<div class="issue-block issue-sev-high">
+    <b>start_process_with_a_shell: </b> Starting a process with a shell, possible injection detected, security issue.<br>
+    <b>Test ID:</b> B605<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/78.html" target="_blank">CWE-78</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_popen2.py</a><br>
+    <b>Line number: </b>121<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b605_start_process_with_a_shell.html</a><br>
+
+<div class="code">
+<pre>
+120	
+121	        w, r = os.popen4(self.cmd)
+122	        self.validate_output(self.teststr, self.expected, r, w)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-24">
+<div class="issue-block issue-sev-high">
+    <b>set_bad_file_permissions: </b> Chmod setting a permissive mask 0o7 on file (TESTFN).<br>
+    <b>Test ID:</b> B103<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/732.html" target="_blank">CWE-732</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_stat.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_stat.py</a><br>
+    <b>Line number: </b>101<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/plugins/b103_set_bad_file_permissions.html" target="_blank">https://bandit.readthedocs.io/en/1.8.3/plugins/b103_set_bad_file_permissions.html</a><br>
+
+<div class="code">
+<pre>
+100	
+101	            os.chmod(TESTFN, 0o007)
+102	            st_mode = self.get_mode()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-25">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> A telnet-related module is being imported.  Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B401<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>2<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b401-import-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b401-import-telnetlib</a><br>
+
+<div class="code">
+<pre>
+1	import socket
+2	import telnetlib
+3	import time
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-26">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>60<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+59	        # connects
+60	        telnet = telnetlib.Telnet(HOST, self.port)
+61	        telnet.sock.close()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-27">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>67<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+66	        try:
+67	            telnet = telnetlib.Telnet(HOST, self.port)
+68	        finally:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-28">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>78<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+77	        try:
+78	            telnet = telnetlib.Telnet(HOST, self.port, timeout=None)
+79	        finally:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-29">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>85<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+84	    def testTimeoutValue(self):
+85	        telnet = telnetlib.Telnet(HOST, self.port, timeout=30)
+86	        self.assertEqual(telnet.sock.gettimeout(), 30)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-30">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>90<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+89	    def testTimeoutOpen(self):
+90	        telnet = telnetlib.Telnet()
+91	        telnet.open(HOST, self.port, timeout=30)
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-31">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>97<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+96	        # Test telnet getter methods
+97	        telnet = telnetlib.Telnet(HOST, self.port, timeout=30)
+98	        t_sock = telnet.sock
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-32">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>132<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+131	        self.dataq.put(want)
+132	        telnet = telnetlib.Telnet(HOST, self.port)
+133	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-33">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>141<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+140	        self.dataq.put(want)
+141	        telnet = telnetlib.Telnet(HOST, self.port)
+142	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-34">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>151<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+150	        self.dataq.put(want)
+151	        telnet = telnetlib.Telnet(HOST, self.port)
+152	        if not telnet._has_poll:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-35">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>163<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+162	        self.dataq.put(want)
+163	        telnet = telnetlib.Telnet(HOST, self.port)
+164	        telnet._has_poll = False
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-36">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>176<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+175	        self.dataq.put(want)
+176	        telnet = telnetlib.Telnet(HOST, self.port)
+177	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-37">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>189<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+188	    def test_read_all_B(self):
+189	        self._test_blocking(telnetlib.Telnet(HOST, self.port).read_all)
+190	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-38">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>193<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+192	        self.dataq.put([EOF_sigil])
+193	        telnet = telnetlib.Telnet(HOST, self.port)
+194	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-39">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>206<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+205	        self.dataq.put(want)
+206	        telnet = telnetlib.Telnet(HOST, self.port)
+207	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-40">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>214<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+213	        self.dataq.put([EOF_sigil])
+214	        telnet = telnetlib.Telnet(HOST, self.port)
+215	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-41">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>219<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+218	    def test_read_some_C(self):
+219	        self._test_blocking(telnetlib.Telnet(HOST, self.port).read_some)
+220	
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-42">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>230<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+229	        self.dataq.put(want)
+230	        telnet = telnetlib.Telnet(HOST, self.port)
+231	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-43">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>245<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+244	        self.dataq.put([EOF_sigil])
+245	        telnet = telnetlib.Telnet(HOST, self.port)
+246	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-44">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>266<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+265	        self.dataq.put([EOF_sigil])
+266	        telnet = telnetlib.Telnet(HOST, self.port)
+267	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-45">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>275<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+274	        self.dataq.put(want)
+275	        telnet = telnetlib.Telnet(HOST, self.port)
+276	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-46">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>297<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+296	        self.dataq.put(want)
+297	        telnet = telnetlib.Telnet(HOST, self.port)
+298	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-47">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>341<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+340	        self.dataq.put(data)
+341	        telnet = telnetlib.Telnet(HOST, self.port)
+342	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-48">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>357<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+356	        self.dataq.put([EOF_sigil])
+357	        telnet = telnetlib.Telnet(HOST, self.port)
+358	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-49">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>379<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+378	        self.dataq.put(send)
+379	        telnet = telnetlib.Telnet(HOST, self.port)
+380	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-50">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>418<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+417	        self.dataq.put(want)
+418	        telnet = telnetlib.Telnet(HOST, self.port)
+419	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-51">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>427<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+426	        self.dataq.put(want)
+427	        telnet = telnetlib.Telnet(HOST, self.port)
+428	        self.dataq.join()
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-52">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>437<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+436	        self.dataq.put(want)
+437	        telnet = telnetlib.Telnet(HOST, self.port)
+438	        if not telnet._has_poll:
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-53">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> Telnet-related functions are being called. Telnet is considered insecure. Use SSH or some other encrypted protocol.<br>
+    <b>Test ID:</b> B312<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_telnetlib.py</a><br>
+    <b>Line number: </b>449<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_calls.html#b312-telnetlib</a><br>
+
+<div class="code">
+<pre>
+448	        self.dataq.put(want)
+449	        telnet = telnetlib.Telnet(HOST, self.port)
+450	        telnet._has_poll = False
+</pre>
+</div>
+
+
+</div>
+</div>
+
+<div id="issue-54">
+<div class="issue-block issue-sev-high">
+    <b>blacklist: </b> A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.<br>
+    <b>Test ID:</b> B402<br>
+    <b>Severity: </b>HIGH<br>
+    <b>Confidence: </b>HIGH<br>
+    <b>CWE: </b><a href="https://cwe.mitre.org/data/definitions/319.html" target="_blank">CWE-319</a><br>
+    <b>File: </b><a href="/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_urllib2.py" target="_blank">/home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK/API 7/tools/lib/python2.7/test/test_urllib2.py</a><br>
+    <b>Line number: </b>626<br>
+    <b>More info: </b><a href="https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b402-import-ftplib" target="_blank">https://bandit.readthedocs.io/en/1.8.3/blacklists/blacklist_imports.html#b402-import-ftplib</a><br>
+
+<div class="code">
+<pre>
+625	
+626	        import ftplib
+627	        data = &quot;rheum rhaponicum&quot;
+</pre>
+</div>
+
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
