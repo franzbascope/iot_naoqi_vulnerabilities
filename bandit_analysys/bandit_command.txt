@@ -1,0 +1,1 @@
+bandit /home/franz2897/Documents/usf_master/iotSecurity/static_analysis/RobotSDK -r -f json  -o robot_sdk_report.json
